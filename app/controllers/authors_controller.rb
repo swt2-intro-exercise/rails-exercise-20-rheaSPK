@@ -37,6 +37,13 @@ class AuthorsController < ApplicationController
     end
   end
 
+  def destroy
+    @author = Author.find(params[:format])
+    @author.destroy
+
+    redirect_to authors_path
+  end
+
   private
   #benötigt um das Erzeugen von Autoren zu erlauben
     def author_params
