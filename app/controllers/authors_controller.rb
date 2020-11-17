@@ -21,6 +21,16 @@ class AuthorsController < ApplicationController
     end
   end
 
+  #the page to edit an author
+  def edit
+    @author = Author.find(params[:format])
+  end
+
+  #the actual update process
+  def update
+
+  end
+
   private
   #benötigt um das Erzeugen von Autoren zu erlauben
     def author_params
