@@ -1,0 +1,13 @@
+ factory :paper do
+    title "COMPUTING MACHINERY AND INTELLIGENCE"
+    venue "Mind 49: 433-460"
+    year 1950
+    authors {build_list :authors, 1}
+  end
+
+  factory :other_paper do
+    title "Hotzenplotz Reise"
+    venue "HU"
+    year 2020
+    authors [Author.new(first_name: 'Peter', last_name: 'Hotzenplotz', homepage: 'hallo.org')]
+  end
